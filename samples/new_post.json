@@ -1,0 +1,44 @@
+{
+  "object": "post",
+  "id": "f3f5fb85967f532f3ab3cc2d",
+  "slug": "two-way-sync-with-notion-databases",
+  "postUrl": "https://feedback.example.com/p/two-way-sync-with-notion-databases",
+  "title": "Two way sync with Notion databases",
+  "content": "<p>Two way sync with Notion databases.</p>",
+  "boardId": "149d439536b3216fdaeeb975",
+  "kind": "issue",
+  "author": {
+    "id": "0b698d5c7e41ba4ea5ee874a",
+    "name": "Sample Author",
+    "email": "author@example.com",
+    "profilePicture": null,
+    "type": "customer"
+  },
+  "status": {
+    "object": "post_status",
+    "id": "8f219e9cb0eb53f16947ccf2",
+    "name": "In Review",
+    "color": "Gray",
+    "type": "reviewing",
+    "isDefault": true
+  },
+  "tags": [],
+  "upvotes": 1,
+  "commentCount": 7,
+  "inReview": false,
+  "isPinned": false,
+  "eta": null,
+  "assigneeId": null,
+  "customFields": {},
+  "createdAt": "2026-11-09T14:00:00.000Z",
+  "updatedAt": "2026-11-09T14:00:00.000Z",
+  "integrations": {
+    "linear": [],
+    "jira": [],
+    "clickup": [],
+    "github": [],
+    "devops": [],
+    "hubspot": [],
+    "salesforce": []
+  }
+}

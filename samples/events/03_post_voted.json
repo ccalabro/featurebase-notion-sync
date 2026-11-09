@@ -1,0 +1,25 @@
+{
+  "object": "notification_event",
+  "id": "notif_demo-0003",
+  "topic": "post.voted",
+  "organizationId": "6595518396205e06b897ad65",
+  "webhookId": "675346db13af7340748ce850",
+  "createdAt": "2026-11-09T14:00:00.000Z",
+  "data": {
+    "object": "notification_event_data",
+    "item": {
+      "object": "post_vote",
+      "action": "add",
+      "postId": "08f86bebb2737f6a6f0fb23c",
+      "voter": {
+        "object": "contact",
+        "id": "7689447ab57a683536c4499d",
+        "userId": "user_123",
+        "email": "voter@example.com",
+        "name": "Sample Voter",
+        "profilePicture": null,
+        "type": "customer"
+      }
+    }
+  }
+}

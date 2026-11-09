@@ -1,0 +1,1015 @@
+[
+  {
+    "object": "post",
+    "id": "08f86bebb2737f6a6f0fb23c",
+    "slug": "notion-integration-2",
+    "postUrl": "https://feedback.featurebase.app/p/notion-integration-2",
+    "title": "Notion integration",
+    "content": "<p>Notion integration.</p>",
+    "boardId": "149d439536b3216fdaeeb975",
+    "kind": "issue",
+    "author": {
+      "id": "6f5da2cec255404e4fb44003",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "5ec84d8dbc74254770f58904",
+      "name": "Planned",
+      "color": "Blue",
+      "type": "unstarted",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 203,
+    "commentCount": 8,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2023-08-14T10:00:00.000Z",
+    "updatedAt": "2026-10-30T08:12:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "6608697a8d41bed440e50454",
+    "slug": "dark-mode-for-the-widget",
+    "postUrl": "https://feedback.example.com/p/dark-mode-for-the-widget",
+    "title": "Dark mode for the widget",
+    "content": "<p>Dark mode for the widget.</p>",
+    "boardId": "a4c123b1612dd272d1371c17",
+    "kind": "issue",
+    "author": {
+      "id": "f31af3176813e02ea68ef786",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "5ec84d8dbc74254770f58904",
+      "name": "Planned",
+      "color": "Blue",
+      "type": "unstarted",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 111,
+    "commentCount": 7,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-01-01T09:00:00.000Z",
+    "updatedAt": "2026-10-01T12:00:00.000Z",
+    "integrations": {
+      "linear": [
+        {
+          "issueId": "lin-0",
+          "issueUrl": "https://linear.app/example/issue/FB-100"
+        }
+      ],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "3cea27d26934b484e73cf575",
+    "slug": "export-votes-to-csv",
+    "postUrl": "https://feedback.example.com/p/export-votes-to-csv",
+    "title": "Export votes to CSV",
+    "content": "<p>Export votes to CSV.</p>",
+    "boardId": "149d439536b3216fdaeeb975",
+    "kind": "issue",
+    "author": {
+      "id": "dcad6ba2b0aee0ca92373288",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "5ec84d8dbc74254770f58904",
+      "name": "Planned",
+      "color": "Blue",
+      "type": "unstarted",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 106,
+    "commentCount": 0,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-02-02T09:00:00.000Z",
+    "updatedAt": "2026-10-02T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "4d8c4fa2815d2802827283e0",
+    "slug": "sso-with-okta",
+    "postUrl": "https://feedback.example.com/p/sso-with-okta",
+    "title": "SSO with Okta",
+    "content": "<p>SSO with Okta.</p>",
+    "boardId": "729fae923d5a4fd12aabfe22",
+    "kind": "issue",
+    "author": {
+      "id": "ad84173581569969e58b0810",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "5ec84d8dbc74254770f58904",
+      "name": "Planned",
+      "color": "Blue",
+      "type": "unstarted",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 69,
+    "commentCount": 0,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-03-03T09:00:00.000Z",
+    "updatedAt": "2026-10-03T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "6f7e3dfc967a64cb14028d51",
+    "slug": "bulk-edit-post-status",
+    "postUrl": "https://feedback.example.com/p/bulk-edit-post-status",
+    "title": "Bulk edit post status",
+    "content": "<p>Bulk edit post status.</p>",
+    "boardId": "a4c123b1612dd272d1371c17",
+    "kind": "issue",
+    "author": {
+      "id": "2c9791e558e08baa7196b50a",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "f506b40928b5b7a767c76fb0",
+      "name": "Closed",
+      "color": "Red",
+      "type": "canceled",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 141,
+    "commentCount": 6,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-04-04T09:00:00.000Z",
+    "updatedAt": "2026-10-04T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [
+        {
+          "issueId": "10003",
+          "issueUrl": "https://example.atlassian.net/browse/FB-3"
+        }
+      ],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "86702824c1c099724caf4941",
+    "slug": "slack-digest-per-board",
+    "postUrl": "https://feedback.example.com/p/slack-digest-per-board",
+    "title": "Slack digest per board",
+    "content": "<p>Slack digest per board.</p>",
+    "boardId": "149d439536b3216fdaeeb975",
+    "kind": "issue",
+    "author": {
+      "id": "d4072014b3ce107f80e222f8",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "8f219e9cb0eb53f16947ccf2",
+      "name": "In Review",
+      "color": "Gray",
+      "type": "reviewing",
+      "isDefault": true
+    },
+    "tags": [],
+    "upvotes": 121,
+    "commentCount": 12,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-05-05T09:00:00.000Z",
+    "updatedAt": "2026-10-05T12:00:00.000Z",
+    "integrations": {
+      "linear": [
+        {
+          "issueId": "lin-4",
+          "issueUrl": "https://linear.app/example/issue/FB-104"
+        }
+      ],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "767efc2f91624a8940f1f836",
+    "slug": "custom-domain-for-the-changelog",
+    "postUrl": "https://feedback.example.com/p/custom-domain-for-the-changelog",
+    "title": "Custom domain for the changelog",
+    "content": "<p>Custom domain for the changelog.</p>",
+    "boardId": "729fae923d5a4fd12aabfe22",
+    "kind": "issue",
+    "author": {
+      "id": "f99eee3692f09e2e8c662248",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "8f219e9cb0eb53f16947ccf2",
+      "name": "In Review",
+      "color": "Gray",
+      "type": "reviewing",
+      "isDefault": true
+    },
+    "tags": [],
+    "upvotes": 67,
+    "commentCount": 5,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-06-06T09:00:00.000Z",
+    "updatedAt": "2026-10-06T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "83b7ffc050fec94dbca3a0aa",
+    "slug": "hide-vote-counts-on-private-boards",
+    "postUrl": "https://feedback.example.com/p/hide-vote-counts-on-private-boards",
+    "title": "Hide vote counts on private boards",
+    "content": "<p>Hide vote counts on private boards.</p>",
+    "boardId": "a4c123b1612dd272d1371c17",
+    "kind": "issue",
+    "author": {
+      "id": "c36098b2cc2bd818319478da",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "5ec84d8dbc74254770f58904",
+      "name": "Planned",
+      "color": "Blue",
+      "type": "unstarted",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 130,
+    "commentCount": 3,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-07-07T09:00:00.000Z",
+    "updatedAt": "2026-10-07T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "0c621de49f145fda9988c79f",
+    "slug": "merge-duplicate-posts-from-the-inbox",
+    "postUrl": "https://feedback.example.com/p/merge-duplicate-posts-from-the-inbox",
+    "title": "Merge duplicate posts from the inbox",
+    "content": "<p>Merge duplicate posts from the inbox.</p>",
+    "boardId": "149d439536b3216fdaeeb975",
+    "kind": "issue",
+    "author": {
+      "id": "c35526f7eaed46725a2a7b86",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "dba41ecccc3fc1626e53a130",
+      "name": "In Progress",
+      "color": "Yellow",
+      "type": "active",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 109,
+    "commentCount": 0,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-08-08T09:00:00.000Z",
+    "updatedAt": "2026-10-08T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "d6c8a1f8b46287cced9041df",
+    "slug": "webhook-for-comment-reactions",
+    "postUrl": "https://feedback.example.com/p/webhook-for-comment-reactions",
+    "title": "Webhook for comment reactions",
+    "content": "<p>Webhook for comment reactions.</p>",
+    "boardId": "729fae923d5a4fd12aabfe22",
+    "kind": "issue",
+    "author": {
+      "id": "f02cee737443e210471948d3",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "43b026c48bbf33feff9243a8",
+      "name": "Completed",
+      "color": "Green",
+      "type": "completed",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 98,
+    "commentCount": 1,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-09-09T09:00:00.000Z",
+    "updatedAt": "2026-10-09T12:00:00.000Z",
+    "integrations": {
+      "linear": [
+        {
+          "issueId": "lin-8",
+          "issueUrl": "https://linear.app/example/issue/FB-108"
+        }
+      ],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "6c87009e8a7f770d9106fd28",
+    "slug": "roadmap-embed-in-our-docs",
+    "postUrl": "https://feedback.example.com/p/roadmap-embed-in-our-docs",
+    "title": "Roadmap embed in our docs",
+    "content": "<p>Roadmap embed in our docs.</p>",
+    "boardId": "a4c123b1612dd272d1371c17",
+    "kind": "issue",
+    "author": {
+      "id": "7db7f1adbc60926f6967e789",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "8f219e9cb0eb53f16947ccf2",
+      "name": "In Review",
+      "color": "Gray",
+      "type": "reviewing",
+      "isDefault": true
+    },
+    "tags": [],
+    "upvotes": 76,
+    "commentCount": 1,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-01-10T09:00:00.000Z",
+    "updatedAt": "2026-10-10T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "57fd14c1604d115cea325a65",
+    "slug": "email-login-without-password",
+    "postUrl": "https://feedback.example.com/p/email-login-without-password",
+    "title": "Email login without password",
+    "content": "<p>Email login without password.</p>",
+    "boardId": "149d439536b3216fdaeeb975",
+    "kind": "issue",
+    "author": {
+      "id": "e19cbae530282bd36cb9d21f",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "f506b40928b5b7a767c76fb0",
+      "name": "Closed",
+      "color": "Red",
+      "type": "canceled",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 126,
+    "commentCount": 3,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-02-11T09:00:00.000Z",
+    "updatedAt": "2026-10-11T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [
+        {
+          "issueId": "10010",
+          "issueUrl": "https://example.atlassian.net/browse/FB-10"
+        }
+      ],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "e6abf0d7c1c1e21862ab8a18",
+    "slug": "translate-the-portal-to-estonian",
+    "postUrl": "https://feedback.example.com/p/translate-the-portal-to-estonian",
+    "title": "Translate the portal to Estonian",
+    "content": "<p>Translate the portal to Estonian.</p>",
+    "boardId": "729fae923d5a4fd12aabfe22",
+    "kind": "issue",
+    "author": {
+      "id": "a8902073fec8df4f50947aae",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "dba41ecccc3fc1626e53a130",
+      "name": "In Progress",
+      "color": "Yellow",
+      "type": "active",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 138,
+    "commentCount": 5,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-03-12T09:00:00.000Z",
+    "updatedAt": "2026-10-12T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "6c57d21fa5d328263dfe574d",
+    "slug": "zapier-trigger-for-new-votes",
+    "postUrl": "https://feedback.example.com/p/zapier-trigger-for-new-votes",
+    "title": "Zapier trigger for new votes",
+    "content": "<p>Zapier trigger for new votes.</p>",
+    "boardId": "a4c123b1612dd272d1371c17",
+    "kind": "issue",
+    "author": {
+      "id": "e739988b886e7577496a2c87",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "f506b40928b5b7a767c76fb0",
+      "name": "Closed",
+      "color": "Red",
+      "type": "canceled",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 20,
+    "commentCount": 8,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-04-13T09:00:00.000Z",
+    "updatedAt": "2026-10-13T12:00:00.000Z",
+    "integrations": {
+      "linear": [
+        {
+          "issueId": "lin-12",
+          "issueUrl": "https://linear.app/example/issue/FB-112"
+        }
+      ],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "3e130f7eb19731662b5e803b",
+    "slug": "filter-roadmap-by-tag",
+    "postUrl": "https://feedback.example.com/p/filter-roadmap-by-tag",
+    "title": "Filter roadmap by tag",
+    "content": "<p>Filter roadmap by tag.</p>",
+    "boardId": "149d439536b3216fdaeeb975",
+    "kind": "issue",
+    "author": {
+      "id": "61ba4168160adb59261ff2d3",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "f506b40928b5b7a767c76fb0",
+      "name": "Closed",
+      "color": "Red",
+      "type": "canceled",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 59,
+    "commentCount": 12,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-05-14T09:00:00.000Z",
+    "updatedAt": "2026-10-14T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "425c8d99d19bdd0b6cc60d5d",
+    "slug": "api-endpoint-for-survey-answers",
+    "postUrl": "https://feedback.example.com/p/api-endpoint-for-survey-answers",
+    "title": "API endpoint for survey answers",
+    "content": "<p>API endpoint for survey answers.</p>",
+    "boardId": "729fae923d5a4fd12aabfe22",
+    "kind": "issue",
+    "author": {
+      "id": "32cbe54014c2b54b95523cf6",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "43b026c48bbf33feff9243a8",
+      "name": "Completed",
+      "color": "Green",
+      "type": "completed",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 140,
+    "commentCount": 4,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-06-15T09:00:00.000Z",
+    "updatedAt": "2026-10-15T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "fa1c257c6f561c5cb347611a",
+    "slug": "markdown-tables-in-posts",
+    "postUrl": "https://feedback.example.com/p/markdown-tables-in-posts",
+    "title": "Markdown tables in posts",
+    "content": "<p>Markdown tables in posts.</p>",
+    "boardId": "a4c123b1612dd272d1371c17",
+    "kind": "issue",
+    "author": {
+      "id": "3ce9d97dcbee500fe7ee5fc3",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "5ec84d8dbc74254770f58904",
+      "name": "Planned",
+      "color": "Blue",
+      "type": "unstarted",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 11,
+    "commentCount": 1,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-07-16T09:00:00.000Z",
+    "updatedAt": "2026-10-16T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "db2e1142a21c402364f9572b",
+    "slug": "weekly-summary-email-for-admins",
+    "postUrl": "https://feedback.example.com/p/weekly-summary-email-for-admins",
+    "title": "Weekly summary email for admins",
+    "content": "<p>Weekly summary email for admins.</p>",
+    "boardId": "149d439536b3216fdaeeb975",
+    "kind": "issue",
+    "author": {
+      "id": "85a8e48f687ab165c58ac583",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "5ec84d8dbc74254770f58904",
+      "name": "Planned",
+      "color": "Blue",
+      "type": "unstarted",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 91,
+    "commentCount": 12,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-08-17T09:00:00.000Z",
+    "updatedAt": "2026-10-17T12:00:00.000Z",
+    "integrations": {
+      "linear": [
+        {
+          "issueId": "lin-16",
+          "issueUrl": "https://linear.app/example/issue/FB-116"
+        }
+      ],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "be38cb8cb4ba2e751989a017",
+    "slug": "show-mrr-next-to-each-voter",
+    "postUrl": "https://feedback.example.com/p/show-mrr-next-to-each-voter",
+    "title": "Show MRR next to each voter",
+    "content": "<p>Show MRR next to each voter.</p>",
+    "boardId": "729fae923d5a4fd12aabfe22",
+    "kind": "issue",
+    "author": {
+      "id": "49ddb14f71010b93b7d946bf",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "f506b40928b5b7a767c76fb0",
+      "name": "Closed",
+      "color": "Red",
+      "type": "canceled",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 12,
+    "commentCount": 2,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-09-18T09:00:00.000Z",
+    "updatedAt": "2026-10-18T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [
+        {
+          "issueId": "10017",
+          "issueUrl": "https://example.atlassian.net/browse/FB-17"
+        }
+      ],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "74e3248c801bef750110c575",
+    "slug": "pin-a-post-to-the-top-of-a-board",
+    "postUrl": "https://feedback.example.com/p/pin-a-post-to-the-top-of-a-board",
+    "title": "Pin a post to the top of a board",
+    "content": "<p>Pin a post to the top of a board.</p>",
+    "boardId": "a4c123b1612dd272d1371c17",
+    "kind": "issue",
+    "author": {
+      "id": "13064d6d59291f0cde2e5738",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "5ec84d8dbc74254770f58904",
+      "name": "Planned",
+      "color": "Blue",
+      "type": "unstarted",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 3,
+    "commentCount": 3,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-01-19T09:00:00.000Z",
+    "updatedAt": "2026-10-19T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "a818d8962058765a6ca7cff0",
+    "slug": "search-inside-comments",
+    "postUrl": "https://feedback.example.com/p/search-inside-comments",
+    "title": "Search inside comments",
+    "content": "<p>Search inside comments.</p>",
+    "boardId": "149d439536b3216fdaeeb975",
+    "kind": "issue",
+    "author": {
+      "id": "0d796c25410335b400141212",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "8f219e9cb0eb53f16947ccf2",
+      "name": "In Review",
+      "color": "Gray",
+      "type": "reviewing",
+      "isDefault": true
+    },
+    "tags": [],
+    "upvotes": 31,
+    "commentCount": 9,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-02-20T09:00:00.000Z",
+    "updatedAt": "2026-10-20T12:00:00.000Z",
+    "integrations": {
+      "linear": [],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  },
+  {
+    "object": "post",
+    "id": "2c376631129f34369aad80b8",
+    "slug": "board-level-permissions-for-guests",
+    "postUrl": "https://feedback.example.com/p/board-level-permissions-for-guests",
+    "title": "Board level permissions for guests",
+    "content": "<p>Board level permissions for guests.</p>",
+    "boardId": "729fae923d5a4fd12aabfe22",
+    "kind": "issue",
+    "author": {
+      "id": "91baf90d0d3bf16295d06910",
+      "name": "Sample Author",
+      "email": "author@example.com",
+      "profilePicture": null,
+      "type": "customer"
+    },
+    "status": {
+      "object": "post_status",
+      "id": "dba41ecccc3fc1626e53a130",
+      "name": "In Progress",
+      "color": "Yellow",
+      "type": "active",
+      "isDefault": false
+    },
+    "tags": [],
+    "upvotes": 51,
+    "commentCount": 5,
+    "inReview": false,
+    "isPinned": false,
+    "eta": null,
+    "assigneeId": null,
+    "customFields": {},
+    "createdAt": "2026-03-21T09:00:00.000Z",
+    "updatedAt": "2026-10-21T12:00:00.000Z",
+    "integrations": {
+      "linear": [
+        {
+          "issueId": "lin-20",
+          "issueUrl": "https://linear.app/example/issue/FB-120"
+        }
+      ],
+      "jira": [],
+      "clickup": [],
+      "github": [],
+      "devops": [],
+      "hubspot": [],
+      "salesforce": []
+    }
+  }
+]

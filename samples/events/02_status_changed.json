@@ -1,0 +1,72 @@
+{
+  "object": "notification_event",
+  "id": "notif_demo-0002",
+  "topic": "post.updated",
+  "organizationId": "6595518396205e06b897ad65",
+  "webhookId": "675346db13af7340748ce850",
+  "createdAt": "2026-11-09T14:00:00.000Z",
+  "data": {
+    "object": "notification_event_data",
+    "item": {
+      "object": "post",
+      "id": "08f86bebb2737f6a6f0fb23c",
+      "slug": "notion-integration-2",
+      "postUrl": "https://feedback.featurebase.app/p/notion-integration-2",
+      "title": "Notion integration",
+      "content": "<p>Notion integration.</p>",
+      "boardId": "149d439536b3216fdaeeb975",
+      "kind": "issue",
+      "author": {
+        "id": "6f5da2cec255404e4fb44003",
+        "name": "Sample Author",
+        "email": "author@example.com",
+        "profilePicture": null,
+        "type": "customer"
+      },
+      "status": {
+        "object": "post_status",
+        "id": "dba41ecccc3fc1626e53a130",
+        "name": "In Progress",
+        "color": "Yellow",
+        "type": "active",
+        "isDefault": false
+      },
+      "tags": [],
+      "upvotes": 203,
+      "commentCount": 8,
+      "inReview": false,
+      "isPinned": false,
+      "eta": null,
+      "assigneeId": null,
+      "customFields": {},
+      "createdAt": "2023-08-14T10:00:00.000Z",
+      "updatedAt": "2026-10-30T08:12:00.000Z",
+      "integrations": {
+        "linear": [],
+        "jira": [],
+        "clickup": [],
+        "github": [],
+        "devops": [],
+        "hubspot": [],
+        "salesforce": []
+      }
+    },
+    "changes": [
+      {
+        "field": "status.id",
+        "oldValue": "5ec84d8dbc74254770f58904",
+        "newValue": "dba41ecccc3fc1626e53a130"
+      },
+      {
+        "field": "status.name",
+        "oldValue": "Planned",
+        "newValue": "In Progress"
+      },
+      {
+        "field": "status.type",
+        "oldValue": "unstarted",
+        "newValue": "active"
+      }
+    ]
+  }
+}

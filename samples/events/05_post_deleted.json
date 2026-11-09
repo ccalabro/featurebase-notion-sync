@@ -1,0 +1,60 @@
+{
+  "object": "notification_event",
+  "id": "notif_demo-0005",
+  "topic": "post.deleted",
+  "organizationId": "6595518396205e06b897ad65",
+  "webhookId": "675346db13af7340748ce850",
+  "createdAt": "2026-11-09T14:00:00.000Z",
+  "data": {
+    "object": "notification_event_data",
+    "item": {
+      "object": "post",
+      "id": "86702824c1c099724caf4941",
+      "slug": "slack-digest-per-board",
+      "postUrl": "https://feedback.example.com/p/slack-digest-per-board",
+      "title": "Slack digest per board",
+      "content": "<p>Slack digest per board.</p>",
+      "boardId": "149d439536b3216fdaeeb975",
+      "kind": "issue",
+      "author": {
+        "id": "d4072014b3ce107f80e222f8",
+        "name": "Sample Author",
+        "email": "author@example.com",
+        "profilePicture": null,
+        "type": "customer"
+      },
+      "status": {
+        "object": "post_status",
+        "id": "8f219e9cb0eb53f16947ccf2",
+        "name": "In Review",
+        "color": "Gray",
+        "type": "reviewing",
+        "isDefault": true
+      },
+      "tags": [],
+      "upvotes": 121,
+      "commentCount": 12,
+      "inReview": false,
+      "isPinned": false,
+      "eta": null,
+      "assigneeId": null,
+      "customFields": {},
+      "createdAt": "2026-05-05T09:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z",
+      "integrations": {
+        "linear": [
+          {
+            "issueId": "lin-4",
+            "issueUrl": "https://linear.app/example/issue/FB-104"
+          }
+        ],
+        "jira": [],
+        "clickup": [],
+        "github": [],
+        "devops": [],
+        "hubspot": [],
+        "salesforce": []
+      }
+    }
+  }
+}

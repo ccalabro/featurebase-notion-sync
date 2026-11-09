@@ -1,0 +1,17 @@
+[
+  {
+    "object": "board",
+    "id": "a4c123b1612dd272d1371c17",
+    "name": "Feature Requests"
+  },
+  {
+    "object": "board",
+    "id": "149d439536b3216fdaeeb975",
+    "name": "Integrations"
+  },
+  {
+    "object": "board",
+    "id": "729fae923d5a4fd12aabfe22",
+    "name": "Bugs"
+  }
+]
