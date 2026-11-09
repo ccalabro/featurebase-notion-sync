@@ -27,8 +27,8 @@ A few choices, and why:
 You need Python 3.10 or newer.
 
 1. In Featurebase, create an API key in Settings, API.
-2. In Notion, create a connection, copy its token, and share the target database with it. The database ID is in the database URL.
-3. Set the env vars and run setup, then the backfill:
+2. In Notion, create a connection and copy its token. Create an empty database yourself. Share that database with the integration from the ••• menu, under Connections. Copy the database ID from the database URL. It is the 32 character ID at the end of the path, before `?v=`.
+3. Set the env vars and run setup, then the backfill. `python3 sync.py setup` only adds the properties.
 
 ```
 export FEATUREBASE_API_KEY=...
@@ -53,7 +53,7 @@ If the Notion database has more than one data source, set `NOTION_DATA_SOURCE_ID
 python3 sync.py demo
 ```
 
-It uses 22 fake posts in `samples/`, a fake Featurebase API and a fake Notion database in memory. The webhook part goes through the real HTTP server on 127.0.0.1, with events signed the way Featurebase signs them. Nothing leaves the machine. Trimmed output:
+It uses 22 fake posts in `samples/`, a fake Featurebase API and a fake Notion database in memory. The fake Notion keeps date properties to the minute, which is what the real API does. The webhook part goes through the real HTTP server on 127.0.0.1, with events signed the way Featurebase signs them. Nothing leaves the machine. Trimmed output:
 
 ```
 == 2. backfill (22 posts, Featurebase pages of 10)
@@ -105,11 +105,12 @@ My assumptions:
 5. **Empty Select when adding a property.** I send `{"select": {}}` to add a Select with no options yet. The docs show option lists, not the empty case.
 6. **Commas in names.** A status or board name with a comma gets the comma replaced by a space, because Notion rejects commas in options.
 7. **Duplicate events.** I remember the last 10,000 event IDs in memory. After a restart a duplicate gets through, but the upsert is idempotent, so it only costs a read.
+8. **Notion dates keep the minute.** A date property comes back with the seconds set to zero, like `2026-11-09T23:08:00.000+00:00`, even when Featurebase sent seconds. Two times in the same minute count as the same time. A title, status, vote, or link change in that minute still updates the row, because those fields are compared on their own.
 
 ## Limits
 
 * This is not affiliated with Featurebase or Notion. It is a small helper I wrote from their public API docs.
-* I haven't tested this against live Featurebase or Notion accounts. Everything runs against fakes built from the docs.
+* I checked the date behavior against a live Featurebase trial and a live Notion database. Notion returns those dates with the seconds set to zero. The rest runs against fakes built from the docs.
 * It is one way, Featurebase to Notion. Edits made in Notion to the synced columns get overwritten on the next change. Other columns you add are left alone.
 * Webhooks need Featurebase's Growth plan or higher. On a lower plan, run `backfill` on a schedule instead. It only writes what changed, so every 15 minutes is fine.
 * The receiver answers 200 first and writes to Notion after, as Featurebase recommends. If a Notion write fails, the event is not retried, so a periodic backfill is the safety net.

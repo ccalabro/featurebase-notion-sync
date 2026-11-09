@@ -24,6 +24,41 @@ def test_backfill_twice_never_duplicates_or_writes(world, posts):
     assert len(world.notion_fake.pages) == len(posts)
 
 
+def test_second_backfill_treats_notion_minute_dates_as_unchanged(world, posts):
+    # The live bug: Featurebase has seconds, Notion stores the minute.
+    # 45 seconds would become the next minute if this rounded instead of dropping them.
+    post = world.fb_fake.posts[posts[0]["id"]]
+    post["updatedAt"] = "2026-11-09T23:08:45.100Z"
+    world.syncer.backfill()
+    stored = rows_by_id(world)[posts[0]["id"]]["updated_at"]
+    assert stored == "2026-11-09T23:08:00.000+00:00"
+    writes = len(world.notion_fake.writes)
+    assert world.syncer.backfill() == {"created": 0, "updated": 0, "unchanged": len(posts)}
+    assert len(world.notion_fake.writes) == writes
+
+
+def test_same_minute_vote_still_updates_the_row(world, posts):
+    post = world.fb_fake.posts[posts[0]["id"]]
+    post["updatedAt"] = "2026-11-09T23:08:08.241Z"
+    world.syncer.backfill()
+    post["upvotes"] = 204
+    post["updatedAt"] = "2026-11-09T23:08:45.000Z"
+    world.logs.clear()
+    counts = world.syncer.backfill()
+    assert counts == {"created": 0, "updated": 1, "unchanged": len(posts) - 1}
+    assert any("votes: 203 -> 204" in line for line in world.logs)
+    assert not any("updated_at" in line for line in world.logs)
+
+
+def test_a_later_minute_updates_the_row(world, posts):
+    world.syncer.backfill()
+    world.fb_fake.posts[posts[0]["id"]]["updatedAt"] = "2026-11-09T23:09:01.000Z"
+    world.logs.clear()
+    counts = world.syncer.backfill()
+    assert counts == {"created": 0, "updated": 1, "unchanged": len(posts) - 1}
+    assert any("updated_at" in line for line in world.logs)
+
+
 def test_backfill_updates_only_what_changed(world, posts):
     world.syncer.backfill()
     world.fb_fake.posts[posts[0]["id"]]["upvotes"] = 250

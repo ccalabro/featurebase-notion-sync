@@ -64,3 +64,29 @@ def test_diff_ignores_equal_timestamps_in_another_format():
     old = {"votes": 1, "updated_at": "2026-10-30T08:12:00.000+00:00"}
     new = {"votes": 2, "updated_at": "2026-10-30T08:12:00.000Z"}
     assert diff(old, new) == {"votes": (1, 2)}
+
+
+def test_notion_minute_truncation_is_not_a_change():
+    # Live read back: Notion dropped the seconds and rewrote Z as +00:00.
+    old = {"votes": 1, "updated_at": "2026-11-09T23:08:00.000+00:00"}
+    new = {"votes": 1, "updated_at": "2026-11-09T23:08:08.241Z"}
+    assert diff(old, new) == {}
+
+
+def test_seconds_past_thirty_stay_in_the_same_minute():
+    # Notion drops seconds. It does not round 45 up to the next minute.
+    old = {"updated_at": "2026-11-09T23:08:00.000+00:00"}
+    new = {"updated_at": "2026-11-09T23:08:45.100Z"}
+    assert diff(old, new) == {}
+
+
+def test_a_later_minute_is_a_change():
+    old = {"votes": 1, "updated_at": "2026-11-09T23:08:00.000+00:00"}
+    new = {"votes": 1, "updated_at": "2026-11-09T23:09:01.000Z"}
+    assert "updated_at" in diff(old, new)
+
+
+def test_a_field_change_in_the_same_minute_is_kept():
+    old = {"votes": 1, "updated_at": "2026-11-09T23:08:00.000+00:00"}
+    new = {"votes": 2, "updated_at": "2026-11-09T23:08:45.100Z"}
+    assert diff(old, new) == {"votes": (1, 2)}

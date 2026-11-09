@@ -73,9 +73,10 @@ def main():
         if i % 7 == 3:
             jira = [{"issueId": str(10000 + i), "issueUrl": f"https://example.atlassian.net/browse/FB-{i}"}]
         day = 1 + i
+        # Seconds are non-zero so the demo hits Notion's minute dates.
         posts.append(post(title, slug, f"https://feedback.example.com/p/{slug}", board, status,
                           rng.randint(0, 150), f"2026-0{1 + i % 9}-{day:02d}T09:00:00.000Z",
-                          f"2026-10-{day:02d}T12:00:00.000Z", integrations(linear, jira)))
+                          f"2026-10-{day:02d}T12:00:08.241Z", integrations(linear, jira)))
 
     (HERE / "boards.json").write_text(json.dumps(BOARDS, indent=2) + "\n")
     (HERE / "posts.json").write_text(json.dumps(posts, indent=2) + "\n")
