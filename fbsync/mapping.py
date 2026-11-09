@@ -110,8 +110,8 @@ def page_to_row(page: dict, title_prop: str) -> dict:
 
 
 def diff(old: dict, new: dict) -> dict:
-    """Fields that change, as {field: (old, new)}. Dates compare loosely
-    because Notion may echo a timestamp in a different but equal format."""
+    """Fields that change, as {field: (old, new)}. Dates compare to the minute.
+    Notion stores a date property that way, and it may also rewrite the format."""
     out = {}
     for k, v in new.items():
         before = old.get(k)
@@ -123,10 +123,17 @@ def diff(old: dict, new: dict) -> dict:
 
 
 def _same_instant(a: str, b: str) -> bool:
+    """True when both times fall in the same minute.
+
+    A Featurebase time such as 2026-11-09T23:08:08.241Z comes back from Notion
+    as 2026-11-09T23:08:00.000+00:00. Seconds are not a real change, because
+    writing them again stores the same minute. A later minute still differs.
+    Other fields are compared on their own, so an edit in that minute is kept.
+    """
     from datetime import datetime
     try:
         pa = datetime.fromisoformat(a.replace("Z", "+00:00"))
         pb = datetime.fromisoformat(b.replace("Z", "+00:00"))
     except ValueError:
         return a == b
-    return pa == pb
+    return pa.replace(second=0, microsecond=0) == pb.replace(second=0, microsecond=0)

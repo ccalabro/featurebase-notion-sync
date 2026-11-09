@@ -12,6 +12,28 @@ import uuid
 from urllib.parse import parse_qs, urlsplit
 
 
+def _notion_date(value: dict) -> dict:
+    """Notion date properties keep the minute and come back in UTC.
+
+    A written 2026-11-09T23:08:08.241Z is stored as 2026-11-09T23:08:00.000+00:00.
+    """
+    from datetime import datetime, timezone
+    out = copy.deepcopy(value)
+    for key in ("start", "end"):
+        text = out.get(key)
+        if not isinstance(text, str) or "T" not in text:
+            continue
+        try:
+            dt = datetime.fromisoformat(text.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        dt = dt.astimezone(timezone.utc).replace(second=0, microsecond=0)
+        out[key] = dt.strftime("%Y-%m-%dT%H:%M:00.000+00:00")
+    return out
+
+
 def _ok(payload, status=200):
     return status, {"Content-Type": "application/json"}, json.dumps(payload).encode()
 
@@ -120,6 +142,8 @@ class FakeNotion:
                 opts = self.schema[name][kind].setdefault("options", [])
                 if v["name"] not in [o["name"] for o in opts]:
                     opts.append({"name": v["name"], "color": "default"})
+            if kind == "date" and v:
+                v = _notion_date(v)
             out[name] = {"id": self.schema[name]["id"], "type": kind, kind: v}
         return out
 
