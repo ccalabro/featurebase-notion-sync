@@ -1,19 +1,19 @@
 # Featurebase to Notion sync
 
-I built this because the Notion integration request on the Featurebase board has 203 votes and has been Planned since August 2023. I think most people asking for it want the same thing: their feedback in a Notion database, next to their specs and roadmap, without copying it by hand. This keeps one Notion row per Featurebase post and updates it when the post changes.
+I built this because Featurebase feedback and a Notion roadmap drift apart. The Notion integration request on the Featurebase board has 203 votes and has been Planned since August 2023. I think most people asking for it want the same thing: their feedback in a Notion database, next to their specs and roadmap, without copying it by hand. This keeps one Notion row per Featurebase post and updates it when the post changes.
 
 ## What it does
 
-1. `setup` adds the properties the sync needs to a Notion database, or only checks them with `--check`.
-2. `backfill` reads every post through the Featurebase API, page by page, and creates or updates one Notion row per post.
-3. `serve` runs a small webhook receiver. It checks the Featurebase signature and updates the matching row on `post.created`, `post.updated` (status changes included), `post.voted` and `post.deleted`.
-4. `demo` runs all of the above on fake data, with no keys.
+It is a one way sync of Featurebase posts into a Notion data source. Each row gets the title, status, votes, board, the post link, the first Linear and Jira links if the post has them, and when the post was last updated in Featurebase.
 
-Each row has the title, status, votes, board, the post link, the first Linear and Jira links if the post has them, and when the post was last updated in Featurebase.
+1. `setup` adds the properties the sync needs to a Notion database, or only checks them with `--check`.
+2. `backfill` reads every post through the Featurebase API, page by page, and creates or updates one Notion row per post. Running it twice writes nothing the second time.
+3. `serve` runs a small webhook receiver. It checks the Featurebase signature (HMAC SHA256 over `{timestamp}.{raw body}`, hex, in `X-Webhook-Signature`) and updates the matching row on `post.created`, `post.updated` (status changes included), `post.voted` and `post.deleted`.
+4. `demo` runs all of the above on fake data, with no keys.
 
 A few choices, and why:
 
-* **The row is keyed by the Featurebase post ID**, in a text property called `Featurebase ID`. Titles change and URLs can change, but the ID doesn't. Running the backfill twice writes nothing the second time.
+* **The row is keyed by the Featurebase post ID**, in a text property called `Featurebase ID`. Titles change and URLs can change, but the ID doesn't.
 * **It only writes when something changed.** It reads the row back and compares first. Notion rate limits are low, and I think a quiet sync is easier to trust.
 * **On every webhook it reads the current post from the API**, instead of trusting the event body. Featurebase says events can arrive out of order, and `post.voted` doesn't carry the vote count. One extra GET is cheap and the row always ends up with the latest state.
 * **Status and Board are Select properties**, not Notion's Status type. Notion adds a new Select option by itself when a post uses a status it hasn't seen, and Featurebase workspaces have custom statuses.
@@ -22,7 +22,7 @@ A few choices, and why:
 * **It never changes a property type.** If `Votes` already exists as text, `setup` stops and says so, because changing a type can lose data.
 * **Standard library only.** There is nothing to install to run it. Pytest is the only dependency, it is pinned, and it is only for the tests.
 
-## Setup in two minutes
+## Setup
 
 You need Python 3.10 or newer.
 
@@ -108,9 +108,10 @@ My assumptions:
 
 ## Limits
 
-* Webhooks need Featurebase's Growth plan or higher. On a lower plan, run `backfill` on a schedule instead. It only writes what changed, so every 15 minutes is fine.
+* This is not affiliated with Featurebase or Notion. It is a small helper I wrote from their public API docs.
 * I haven't tested this against live Featurebase or Notion accounts. Everything runs against fakes built from the docs.
 * It is one way, Featurebase to Notion. Edits made in Notion to the synced columns get overwritten on the next change. Other columns you add are left alone.
+* Webhooks need Featurebase's Growth plan or higher. On a lower plan, run `backfill` on a schedule instead. It only writes what changed, so every 15 minutes is fine.
 * The receiver answers 200 first and writes to Notion after, as Featurebase recommends. If a Notion write fails, the event is not retried, so a periodic backfill is the safety net.
 * Featurebase doesn't keep events while a webhook is paused or disabled. A backfill after fixing it catches up.
 * Notion queries return at most 10,000 rows. The backfill index would miss rows beyond that, so a very large board needs a different index.
